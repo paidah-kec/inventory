@@ -18,6 +18,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/cek', function () {
-    return ["status" => "Aman!", "pesan" => "Web API Inventory sudah aktif"];
+Route::get('test', function () {
+    return response()->json(['message' => 'OK']);
 });
