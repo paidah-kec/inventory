@@ -1,4 +1,4 @@
-<?php
+<?php // app/Http/Request/UpdateCategoryRequest
 
 namespace App\Http\Requests;
 

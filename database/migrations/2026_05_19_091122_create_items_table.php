@@ -1,4 +1,4 @@
-<?php
+<?php // database/migrations/create_items_table
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;

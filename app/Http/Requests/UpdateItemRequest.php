@@ -1,4 +1,4 @@
-<?php
+<?php // app/Http/Request/UpdateItemRequest
 
 namespace App\Http\Requests;
 
