@@ -1,4 +1,4 @@
-<?php
+<?php // app/Models/Item
 
 namespace App\Models;
 

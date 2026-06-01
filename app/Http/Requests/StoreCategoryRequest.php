@@ -1,4 +1,4 @@
-<?php
+<?php // app/Http/Request/StoreCategoryRequest
 
 namespace App\Http\Requests;
 

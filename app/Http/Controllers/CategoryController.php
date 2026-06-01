@@ -1,4 +1,4 @@
-<?php
+<?php // app/Http/Controllers/CategoryController
 
 namespace App\Http\Controllers;
 
@@ -75,3 +75,5 @@ class CategoryController extends Controller
         ]);
     }
 }
+
+

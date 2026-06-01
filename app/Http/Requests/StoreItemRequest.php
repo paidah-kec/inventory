@@ -1,4 +1,4 @@
-<?php
+<?php // app/Http/Request/StoreItemRequest
 
 namespace App\Http\Requests;
 
@@ -25,3 +25,4 @@ class StoreItemRequest extends FormRequest {
         ];
     }
 }
+

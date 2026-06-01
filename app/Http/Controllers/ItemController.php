@@ -1,4 +1,4 @@
-<?php
+<?php // app/Http/Controllers/ItemController
 
 namespace App\Http\Controllers;
 
@@ -76,3 +76,4 @@ class ItemController extends Controller
         ]);
     }
 }
+
