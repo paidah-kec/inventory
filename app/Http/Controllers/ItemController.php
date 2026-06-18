@@ -17,6 +17,7 @@ class ItemController extends BaseController
         $this->svc = $svc;
     }
 
+    // Modifikasi fungsi index untuk filter berdasarkan category_id
     public function index(Request $request) 
     {
         // Mulai query dengan memuat relasi kategori
