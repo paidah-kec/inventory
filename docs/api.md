@@ -28,3 +28,6 @@ GET    /items/{id}
 PUT    /items/{id}
 DELETE /items/{id} (admin only)
 
+### GET /api/v1/items?category_id={id}
+**Description:** Filter items by category, optional.
+

@@ -6,6 +6,7 @@ use App\Http\Requests\StoreItemRequest;
 use App\Http\Requests\UpdateItemRequest;
 use App\Services\ItemService;
 use App\Http\Controllers\Api\BaseController;
+use Illuminate\Http\Request;
 
 class ItemController extends BaseController
 {
@@ -16,9 +17,21 @@ class ItemController extends BaseController
         $this->svc = $svc;
     }
 
-    public function index()
+    public function index(Request $request) 
     {
-        return $this->success($this->svc->all());
+        // Mulai query dengan memuat relasi kategori
+        $query = \App\Models\Item::with('category');
+
+        // Jika ada parameter category_id, tambahkan filter 'where'
+        if ($request->filled('category_id')) {
+            $query->where('category_id', $request->category_id);
+        }
+
+        return response()->json([
+            'status'  => 'success',
+            'data'    => $query->get(),
+            'message' => 'Berhasil menarik data Item'
+        ]);
     }
 
     public function store(StoreItemRequest $req)
