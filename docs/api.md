@@ -31,3 +31,10 @@ DELETE /items/{id} (admin only)
 ### GET /api/v1/items?category_id={id}
 **Description:** Filter items by category, optional.
 
+### Rate Limiting & Security
+All API endpoints inside the sanctum middleware are protected by a rate limiter.
+* **Limit:** 60 requests per minute.
+* **Header Response:** Check `X-RateLimit-Limit` and `X-RateLimit-Remaining`.
+
+### Activity Logging
+System logs are automatically written to `storage/logs/laravel.log` for every successful Data Manipulation Language (DML) activity on Items (Create, Update, Delete).
